@@ -12,8 +12,7 @@ with open("refGene.txt", "r")as file:
 # 列ごとの空白除去してタブ区切りにしてカラムに入れる
         columns = line.strip().split("\t")
 
-# refGene.txtのgenomeをカラムに入れていく
-       # accession = columns[1] 
+# refGene.txtのgenomeをカラムに入れていく 
         gene_name = columns[1]
        # accession番号がNMから始まるもの
         if not gene_name.startswith("NM"):
