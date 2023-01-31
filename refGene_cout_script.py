@@ -32,7 +32,7 @@ with open("Accession_count.txt","w")as output:
         output.write(f"Gene:{gene_name} \nCount:{count}\n")
     
     
-# Print out the gene name and count for each gene
+## Print out the gene name and count for each gene
 #for gene_name, count in gene_counts.items():
 #   print(gene_name, count)
 
