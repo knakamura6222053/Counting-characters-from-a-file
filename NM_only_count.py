@@ -27,12 +27,13 @@ with open("refGene.txt", "r")as file:
             d_gene_counts[gene_name] = 1
 
 # 結果のソート
-sorted_d_gene_counts = sorted(d_gene_counts.items(), key = lambda x: x[1], reverse=True)
+#sorted_d_gene_counts = sorted(d_gene_counts.items(), key = lambda x: x[1], reverse=True)
 
-# 結果出力
+# 結果出力(NM番号を取り出してsort)
 with open("only_NM_count.txt","w")as output:
-    for gene_name, count in sorted_d_gene_counts:
-        output.write(f"Gene:{gene_name} \nCount:{count} \n")
+    for gene_name in sorted(d_gene_counts.keys()):
+        count = d_gene_counts[gene_name]
+        output.write(f"{gene_name}\t{count}\n")
 
 
 
