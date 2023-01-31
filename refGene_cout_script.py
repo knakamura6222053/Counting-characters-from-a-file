@@ -23,16 +23,11 @@ with open("refGene.txt", "r") as file:
             
             # If it's not, add it to the dictionary with a count of 1
             gene_counts[gene_name] = 1
-# sort result
-sorted_gene_counts =sorted(gene_counts.items(), key = lambda x: x[1], reverse=True)
-
-# output 
+# output
 with open("Accession_count.txt","w")as output:
-    for gene_name, count in sorted_gene_counts:
-        output.write(f"Gene:{gene_name} \nCount:{count}\n")
+    for gene_name in sorted(gene_counts.keys()):
+        count = gene_counts[gene_name]    
+        output.write(f"{gene_name} \t{count}\n")
     
-    
-## Print out the gene name and count for each gene
-#for gene_name, count in gene_counts.items():
-#   print(gene_name, count)
+
 
