@@ -2,13 +2,13 @@
 
 # refGene.txtを読み込む
 with open("refGene.txt", "r")as file:
-
+    
 # gene_nameとcountをする際の枠を作る。(dict型)
-    d_gene_counts = {}
+    d_gene_name = {}
 
 # 1列ごとにデータを繰り返し読み込む
     for line in file:
-
+        
 # 列ごとの空白除去してタブ区切りにしてカラムに入れる
         columns = line.strip().split("\t")
 
@@ -24,10 +24,11 @@ with open("refGene.txt", "r")as file:
 
 
         else:
-                d_gene_counts[gene_name] = 1
+            d_gene_counts[gene_name] = 1
 
 
 #出力する
-
     for gene_name,count in d_gene_counts.items():
-            print(gene_name, count) 
+        print(gene_name,count)
+        
+             
