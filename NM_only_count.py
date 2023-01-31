@@ -4,7 +4,7 @@
 with open("refGene.txt", "r")as file:
     
 # gene_nameとcountをする際の枠を作る。(dict型)
-    d_gene_name = {}
+    d_gene_counts = {}
 
 # 1列ごとにデータを繰り返し読み込む
     for line in file:
