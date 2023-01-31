@@ -26,9 +26,12 @@ with open("refGene.txt", "r")as file:
         else:
             d_gene_counts[gene_name] = 1
 
+# 結果のソート
+sorted_d_gene_counts = sorted(d_gene_counts.items(), key = lambda x: x[1], reverse=True)
 
-#出力する
-    for gene_name,count in d_gene_counts.items():
-        print(gene_name,count)
+
+# 出力する
+for gene_name,count in sorted_d_gene_counts:
+    print(gene_name,count)
         
              
