@@ -13,7 +13,7 @@ with open("refGene.txt", "r") as file:
         columns = line.strip().split("\t")
         
         # Get the gene name from the second column
-        gene_name = columns[1]
+        gene_name = columns[12]
         
         # Check if the gene name is already in the dictionary
         if gene_name in gene_counts:
